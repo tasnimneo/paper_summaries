@@ -24,7 +24,7 @@ For the DNN experiments, they used the architecture with three hidden layers as 
 In the training stage, they optimized the model using mini-batch based stochastic gradient descent (SGD). Each mini-batch consists of 1024 training samples. They observed that the DNN training usually converges within 20 epochs (passes) over the entire training data.
 <p align="justify">
 
-**Evaluation Data and Method**: 
+**Evaluation Data and Method**
 
 <p align="justify">
 The evaluation data set contains 16,510 English queries sampled from one-year query log files of a commercial search engine. On average, each query is associated with 15 Web documents (URLs). Each query-title pair has a relevance label. The label is human generated and is on a 5-level relevance scale, 0 to 4, where level 4 means that the document is the most relevant to query and 0 means document is not relevant to query. All the queries and documents are preprocessed such that the text is white-space tokenized and lowercased, numbers are retained, and no stemming/inflection is performed.
