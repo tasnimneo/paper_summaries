@@ -29,7 +29,7 @@ The evaluation data set contains 12,071 English queries sampled from one-year  q
 The performance of all ranking models we have evaluated has been measured by mean Normalized Discounted Cumulative Gain (NDCG), and we will report NDCG scores at truncation levels 1, 3, and 10 in this section.
 <p align="justify">
 
-**More details on this work**: [Unofficial Keras Implementation](https://github.com/airalcorn2/Deep-Semantic-Similarity-Model)
+**More details on this work**: [Unofficial implementation in keras](https://github.com/airalcorn2/Deep-Semantic-Similarity-Model)
 
 **Bibliography**
 ```
