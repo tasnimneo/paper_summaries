@@ -12,13 +12,16 @@ Continuous Bag-of-Words (CBOW) and Skip-Gram (SG) model contains two separate em
 
 #### Key Notes
 
-
+<p align="justify">
+They have two variants of their proposed model where they considered IN-OUT and IN-IN embedding space. On both the evaluation dataset, IN-OUT variant (trained on queries) performed better than all baseline models (BM25 and LSA baselines) and IN-IN model. From their experiment, they concluded that the DESM is primarily suited for ranking at top positions or in conjunction with other document ranking features as all DESM variants perform poorly in non-telescoping settings.
+<p align="justify">
+  
 **Evaluation Data and Method**
 
 <p align="justify">
-All the datasets that are used for this study are sampled from Bing’s large scale query logs. They generated 3 version of evaluation datasets. (1) Explicitly judged test set which are judged by human evaluators, (2) Implicit feedback based test set which contains binary relevance judgement based on whether the document was clicked by the user and (3) Implicit feedback based training set which is only used for tuning the parameters for the BM25 baseline and the mixture model.
+All the datasets that are used for this study are sampled from Bing’s large scale query logs. They generated 3 version of evaluation datasets. (1) Explicitly judged test set (7,741 queries) which are judged by human evaluators, (2) Implicit feedback based test set (7,477 queries) which contains binary relevance judgement based on whether the document was clicked by the user and (3) Implicit feedback based training set (7,429 queries) which is only used for tuning the parameters for the BM25 baseline and the mixture model.
 
-The performance of all ranking models evaluated has been measured by mean Normalized Discounted Cumulative Gain (NDCG), and we will report NDCG scores at truncation levels 1, 3, and 10 in this section.
+They have two different experiment settings, telescoped and non-telescoped. In telescoped setting, they considered all documents retrieved by Bing as the candidate set of documents to be re-ranked for each query. In the non-telescoped setting, they considered every distinct document in the test set as a candidate for every query in the same dataset. The performance of all ranking models evaluated has been measured by mean Normalized Discounted Cumulative Gain (NDCG), and we will report NDCG scores at truncation levels 1, 3, and 10 in this section.
 <p align="justify">
 
 **More details on this work**: [Project Page](https://www.microsoft.com/en-us/research/project/dual-embedding-space-model-desm/). 
