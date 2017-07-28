@@ -25,7 +25,9 @@ They used gated recurrent unit (GRU) as the recurrent neural network architectur
 
 <p align="justify">
 They executed their experiments on the AOL search log. They removed all nonalphanumeric characters from the queries, applied a spelling corrector and lowercasing. They defined the end of a session by a 30 minute window of idle time. They used the last one month of the AOL search log for training, validation and testing. First two weeks of data are used as a training set and the remaining two weeks are split into the validation and the test set. In total, there were <b>435,705</b> sessions in the training set, <b>166,836</b> in the validation set and <b>230,359</b> in the test set.
-
+<p align="justify">
+  
+<p align="justify">
 Vocabulary size in their experiments was 90K. They used gradient clipping (threshold, c=1) and early stopping during training. The training stops if the likelihood of the validation set does not improve for 5 consecutive iterations. Parameter optimization is done using mini-batch RMSPROP. The dimensionality of the query and session level RNN was set to 1000 and 1500 respectively. Embedding dimension was set to 300. As a part of their evaluation, they did a user study to test the generative capabilities of their query suggestion system. The assessment was conducted by a group of 5 assessors. 
 <p align="justify">
 
